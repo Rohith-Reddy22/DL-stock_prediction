@@ -1,0 +1,814 @@
+2026-06-28 09:19:51 | INFO     | __main__ | ============================================================
+2026-06-28 09:19:51 | INFO     | __main__ | PHASE 5 — Evaluation & Visualisation
+2026-06-28 09:19:51 | INFO     | __main__ | Device: mps
+2026-06-28 09:19:51 | INFO     | __main__ | ============================================================
+2026-06-28 09:19:51 | INFO     | datasets.dataloader | Loading split DataFrames...
+2026-06-28 09:19:51 | INFO     | datasets.dataloader | Split sizes — train: 412 | val: 88 | test: 89 | full: 589
+2026-06-28 09:19:51 | INFO     | datasets.dataloader | Loaded embedding index: 589 entries.
+2026-06-28 09:19:51 | INFO     | datasets.dataloader | Building datasets...
+2026-06-28 09:19:51 | INFO     | datasets.stock_dataset | Dataset built: 382 valid samples | excluded 30 (no history) | 0 (no embedding)
+2026-06-28 09:19:51 | INFO     | datasets.stock_dataset | Dataset built: 88 valid samples | excluded 0 (no history) | 0 (no embedding)
+2026-06-28 09:19:51 | INFO     | datasets.stock_dataset | Dataset built: 89 valid samples | excluded 0 (no history) | 0 (no embedding)
+2026-06-28 09:19:51 | INFO     | datasets.dataloader | Dataset sizes — train: 382 | val: 88 | test: 89
+2026-06-28 09:19:51 | INFO     | datasets.dataloader | DataLoaders ready — batch_size=32 | train_batches=12 | val_batches=3 | test_batches=3
+2026-06-28 09:19:51 | INFO     | __main__ | Evaluating: price_only_h64 (ckpt: checkpoints/price_only_h64_best.pt)
+2026-06-28 09:19:51 | INFO     | evaluation.evaluator | ==================================================
+2026-06-28 09:19:51 | INFO     | evaluation.evaluator | TEST RESULTS: price_only_h64
+2026-06-28 09:19:51 | INFO     | evaluation.evaluator |   Accuracy  : 0.5056
+2026-06-28 09:19:51 | INFO     | evaluation.evaluator |   Precision : 0.2528 (macro)
+2026-06-28 09:19:51 | INFO     | evaluation.evaluator |   Recall    : 0.5000 (macro)
+2026-06-28 09:19:51 | INFO     | evaluation.evaluator |   F1        : 0.3358 (macro)
+2026-06-28 09:19:51 | INFO     | evaluation.evaluator |   ROC-AUC   : 0.5242
+2026-06-28 09:19:51 | INFO     | evaluation.evaluator |   Pred dist : class0=0, class1=89
+2026-06-28 09:19:51 | INFO     | evaluation.evaluator | 
+              precision    recall  f1-score   support
+
+    Down (0)       0.00      0.00      0.00        44
+      Up (1)       0.51      1.00      0.67        45
+
+    accuracy                           0.51        89
+   macro avg       0.25      0.50      0.34        89
+weighted avg       0.26      0.51      0.34        89
+
+2026-06-28 09:19:53 | INFO     | __main__ | Saved confusion matrix: evaluation/plots/confusion_matrix_price_only_h64.png
+2026-06-28 09:19:53 | INFO     | __main__ | Saved loss curve: evaluation/plots/loss_curve_price_only_h64.png
+2026-06-28 09:19:53 | INFO     | __main__ | Evaluating: price_only_h128 (ckpt: checkpoints/price_only_h128_best.pt)
+2026-06-28 09:19:53 | INFO     | evaluation.evaluator | ==================================================
+2026-06-28 09:19:53 | INFO     | evaluation.evaluator | TEST RESULTS: price_only_h128
+2026-06-28 09:19:53 | INFO     | evaluation.evaluator |   Accuracy  : 0.5056
+2026-06-28 09:19:53 | INFO     | evaluation.evaluator |   Precision : 0.2528 (macro)
+2026-06-28 09:19:53 | INFO     | evaluation.evaluator |   Recall    : 0.5000 (macro)
+2026-06-28 09:19:53 | INFO     | evaluation.evaluator |   F1        : 0.3358 (macro)
+2026-06-28 09:19:53 | INFO     | evaluation.evaluator |   ROC-AUC   : 0.5806
+2026-06-28 09:19:53 | INFO     | evaluation.evaluator |   Pred dist : class0=0, class1=89
+2026-06-28 09:19:53 | INFO     | evaluation.evaluator | 
+              precision    recall  f1-score   support
+
+    Down (0)       0.00      0.00      0.00        44
+      Up (1)       0.51      1.00      0.67        45
+
+    accuracy                           0.51        89
+   macro avg       0.25      0.50      0.34        89
+weighted avg       0.26      0.51      0.34        89
+
+2026-06-28 09:19:53 | INFO     | __main__ | Saved confusion matrix: evaluation/plots/confusion_matrix_price_only_h128.png
+2026-06-28 09:19:53 | INFO     | __main__ | Saved loss curve: evaluation/plots/loss_curve_price_only_h128.png
+2026-06-28 09:19:53 | INFO     | __main__ | Evaluating: price_only_h256 (ckpt: checkpoints/price_only_h256_best.pt)
+2026-06-28 09:19:53 | INFO     | evaluation.evaluator | ==================================================
+2026-06-28 09:19:53 | INFO     | evaluation.evaluator | TEST RESULTS: price_only_h256
+2026-06-28 09:19:53 | INFO     | evaluation.evaluator |   Accuracy  : 0.5056
+2026-06-28 09:19:53 | INFO     | evaluation.evaluator |   Precision : 0.2528 (macro)
+2026-06-28 09:19:53 | INFO     | evaluation.evaluator |   Recall    : 0.5000 (macro)
+2026-06-28 09:19:53 | INFO     | evaluation.evaluator |   F1        : 0.3358 (macro)
+2026-06-28 09:19:53 | INFO     | evaluation.evaluator |   ROC-AUC   : 0.6253
+2026-06-28 09:19:53 | INFO     | evaluation.evaluator |   Pred dist : class0=0, class1=89
+2026-06-28 09:19:53 | INFO     | evaluation.evaluator | 
+              precision    recall  f1-score   support
+
+    Down (0)       0.00      0.00      0.00        44
+      Up (1)       0.51      1.00      0.67        45
+
+    accuracy                           0.51        89
+   macro avg       0.25      0.50      0.34        89
+weighted avg       0.26      0.51      0.34        89
+
+2026-06-28 09:19:53 | INFO     | __main__ | Saved confusion matrix: evaluation/plots/confusion_matrix_price_only_h256.png
+2026-06-28 09:19:53 | INFO     | __main__ | Saved loss curve: evaluation/plots/loss_curve_price_only_h256.png
+2026-06-28 09:19:53 | INFO     | __main__ | Evaluating: text_only_h64 (ckpt: checkpoints/text_only_h64_best.pt)
+2026-06-28 09:19:53 | INFO     | evaluation.evaluator | ==================================================
+2026-06-28 09:19:53 | INFO     | evaluation.evaluator | TEST RESULTS: text_only_h64
+2026-06-28 09:19:53 | INFO     | evaluation.evaluator |   Accuracy  : 0.5056
+2026-06-28 09:19:53 | INFO     | evaluation.evaluator |   Precision : 0.2528 (macro)
+2026-06-28 09:19:53 | INFO     | evaluation.evaluator |   Recall    : 0.5000 (macro)
+2026-06-28 09:19:53 | INFO     | evaluation.evaluator |   F1        : 0.3358 (macro)
+2026-06-28 09:19:53 | INFO     | evaluation.evaluator |   ROC-AUC   : 0.4631
+2026-06-28 09:19:53 | INFO     | evaluation.evaluator |   Pred dist : class0=0, class1=89
+2026-06-28 09:19:53 | INFO     | evaluation.evaluator | 
+              precision    recall  f1-score   support
+
+    Down (0)       0.00      0.00      0.00        44
+      Up (1)       0.51      1.00      0.67        45
+
+    accuracy                           0.51        89
+   macro avg       0.25      0.50      0.34        89
+weighted avg       0.26      0.51      0.34        89
+
+2026-06-28 09:19:53 | INFO     | __main__ | Saved confusion matrix: evaluation/plots/confusion_matrix_text_only_h64.png
+2026-06-28 09:19:53 | INFO     | __main__ | Saved loss curve: evaluation/plots/loss_curve_text_only_h64.png
+2026-06-28 09:19:53 | INFO     | __main__ | Evaluating: text_only_h128 (ckpt: checkpoints/text_only_h64_best.pt)
+2026-06-28 09:19:53 | INFO     | evaluation.evaluator | ==================================================
+2026-06-28 09:19:53 | INFO     | evaluation.evaluator | TEST RESULTS: text_only_h128
+2026-06-28 09:19:53 | INFO     | evaluation.evaluator |   Accuracy  : 0.5056
+2026-06-28 09:19:53 | INFO     | evaluation.evaluator |   Precision : 0.2528 (macro)
+2026-06-28 09:19:53 | INFO     | evaluation.evaluator |   Recall    : 0.5000 (macro)
+2026-06-28 09:19:53 | INFO     | evaluation.evaluator |   F1        : 0.3358 (macro)
+2026-06-28 09:19:53 | INFO     | evaluation.evaluator |   ROC-AUC   : 0.4631
+2026-06-28 09:19:53 | INFO     | evaluation.evaluator |   Pred dist : class0=0, class1=89
+2026-06-28 09:19:53 | INFO     | evaluation.evaluator | 
+              precision    recall  f1-score   support
+
+    Down (0)       0.00      0.00      0.00        44
+      Up (1)       0.51      1.00      0.67        45
+
+    accuracy                           0.51        89
+   macro avg       0.25      0.50      0.34        89
+weighted avg       0.26      0.51      0.34        89
+
+2026-06-28 09:19:54 | INFO     | __main__ | Saved confusion matrix: evaluation/plots/confusion_matrix_text_only_h128.png
+2026-06-28 09:19:54 | INFO     | __main__ | Saved loss curve: evaluation/plots/loss_curve_text_only_h128.png
+2026-06-28 09:19:54 | INFO     | __main__ | Evaluating: text_only_h256 (ckpt: checkpoints/text_only_h64_best.pt)
+2026-06-28 09:19:54 | INFO     | evaluation.evaluator | ==================================================
+2026-06-28 09:19:54 | INFO     | evaluation.evaluator | TEST RESULTS: text_only_h256
+2026-06-28 09:19:54 | INFO     | evaluation.evaluator |   Accuracy  : 0.5056
+2026-06-28 09:19:54 | INFO     | evaluation.evaluator |   Precision : 0.2528 (macro)
+2026-06-28 09:19:54 | INFO     | evaluation.evaluator |   Recall    : 0.5000 (macro)
+2026-06-28 09:19:54 | INFO     | evaluation.evaluator |   F1        : 0.3358 (macro)
+2026-06-28 09:19:54 | INFO     | evaluation.evaluator |   ROC-AUC   : 0.4631
+2026-06-28 09:19:54 | INFO     | evaluation.evaluator |   Pred dist : class0=0, class1=89
+2026-06-28 09:19:54 | INFO     | evaluation.evaluator | 
+              precision    recall  f1-score   support
+
+    Down (0)       0.00      0.00      0.00        44
+      Up (1)       0.51      1.00      0.67        45
+
+    accuracy                           0.51        89
+   macro avg       0.25      0.50      0.34        89
+weighted avg       0.26      0.51      0.34        89
+
+2026-06-28 09:19:54 | INFO     | __main__ | Saved confusion matrix: evaluation/plots/confusion_matrix_text_only_h256.png
+2026-06-28 09:19:54 | INFO     | __main__ | Saved loss curve: evaluation/plots/loss_curve_text_only_h256.png
+2026-06-28 09:19:54 | INFO     | __main__ | Evaluating: fusion_h64 (ckpt: checkpoints/fusion_h64_best.pt)
+2026-06-28 09:19:54 | INFO     | evaluation.evaluator | ==================================================
+2026-06-28 09:19:54 | INFO     | evaluation.evaluator | TEST RESULTS: fusion_h64
+2026-06-28 09:19:54 | INFO     | evaluation.evaluator |   Accuracy  : 0.5056
+2026-06-28 09:19:54 | INFO     | evaluation.evaluator |   Precision : 0.2528 (macro)
+2026-06-28 09:19:54 | INFO     | evaluation.evaluator |   Recall    : 0.5000 (macro)
+2026-06-28 09:19:54 | INFO     | evaluation.evaluator |   F1        : 0.3358 (macro)
+2026-06-28 09:19:54 | INFO     | evaluation.evaluator |   ROC-AUC   : 0.4763
+2026-06-28 09:19:54 | INFO     | evaluation.evaluator |   Pred dist : class0=0, class1=89
+2026-06-28 09:19:54 | INFO     | evaluation.evaluator | 
+              precision    recall  f1-score   support
+
+    Down (0)       0.00      0.00      0.00        44
+      Up (1)       0.51      1.00      0.67        45
+
+    accuracy                           0.51        89
+   macro avg       0.25      0.50      0.34        89
+weighted avg       0.26      0.51      0.34        89
+
+2026-06-28 09:19:54 | INFO     | __main__ | Saved confusion matrix: evaluation/plots/confusion_matrix_fusion_h64.png
+2026-06-28 09:19:54 | INFO     | __main__ | Saved loss curve: evaluation/plots/loss_curve_fusion_h64.png
+2026-06-28 09:19:54 | INFO     | __main__ | Evaluating: fusion_h128 (ckpt: checkpoints/fusion_h128_best.pt)
+2026-06-28 09:19:54 | INFO     | evaluation.evaluator | ==================================================
+2026-06-28 09:19:54 | INFO     | evaluation.evaluator | TEST RESULTS: fusion_h128
+2026-06-28 09:19:54 | INFO     | evaluation.evaluator |   Accuracy  : 0.5056
+2026-06-28 09:19:54 | INFO     | evaluation.evaluator |   Precision : 0.2528 (macro)
+2026-06-28 09:19:54 | INFO     | evaluation.evaluator |   Recall    : 0.5000 (macro)
+2026-06-28 09:19:54 | INFO     | evaluation.evaluator |   F1        : 0.3358 (macro)
+2026-06-28 09:19:54 | INFO     | evaluation.evaluator |   ROC-AUC   : 0.4525
+2026-06-28 09:19:54 | INFO     | evaluation.evaluator |   Pred dist : class0=0, class1=89
+2026-06-28 09:19:54 | INFO     | evaluation.evaluator | 
+              precision    recall  f1-score   support
+
+    Down (0)       0.00      0.00      0.00        44
+      Up (1)       0.51      1.00      0.67        45
+
+    accuracy                           0.51        89
+   macro avg       0.25      0.50      0.34        89
+weighted avg       0.26      0.51      0.34        89
+
+2026-06-28 09:19:54 | INFO     | __main__ | Saved confusion matrix: evaluation/plots/confusion_matrix_fusion_h128.png
+2026-06-28 09:19:54 | INFO     | __main__ | Saved loss curve: evaluation/plots/loss_curve_fusion_h128.png
+2026-06-28 09:19:54 | INFO     | __main__ | Evaluating: fusion_h256 (ckpt: checkpoints/fusion_h256_best.pt)
+2026-06-28 09:19:55 | INFO     | evaluation.evaluator | ==================================================
+2026-06-28 09:19:55 | INFO     | evaluation.evaluator | TEST RESULTS: fusion_h256
+2026-06-28 09:19:55 | INFO     | evaluation.evaluator |   Accuracy  : 0.5056
+2026-06-28 09:19:55 | INFO     | evaluation.evaluator |   Precision : 0.2528 (macro)
+2026-06-28 09:19:55 | INFO     | evaluation.evaluator |   Recall    : 0.5000 (macro)
+2026-06-28 09:19:55 | INFO     | evaluation.evaluator |   F1        : 0.3358 (macro)
+2026-06-28 09:19:55 | INFO     | evaluation.evaluator |   ROC-AUC   : 0.4444
+2026-06-28 09:19:55 | INFO     | evaluation.evaluator |   Pred dist : class0=0, class1=89
+2026-06-28 09:19:55 | INFO     | evaluation.evaluator | 
+              precision    recall  f1-score   support
+
+    Down (0)       0.00      0.00      0.00        44
+      Up (1)       0.51      1.00      0.67        45
+
+    accuracy                           0.51        89
+   macro avg       0.25      0.50      0.34        89
+weighted avg       0.26      0.51      0.34        89
+
+2026-06-28 09:19:55 | INFO     | __main__ | Saved confusion matrix: evaluation/plots/confusion_matrix_fusion_h256.png
+2026-06-28 09:19:55 | INFO     | __main__ | Saved loss curve: evaluation/plots/loss_curve_fusion_h256.png
+2026-06-28 09:19:55 | INFO     | __main__ | Full test results saved to evaluation/test_results.csv
+2026-06-28 09:22:18 | INFO     | __main__ | ============================================================
+2026-06-28 09:22:18 | INFO     | __main__ | PHASE 5 — Evaluation & Visualisation
+2026-06-28 09:22:18 | INFO     | __main__ | Device: mps
+2026-06-28 09:22:18 | INFO     | __main__ | ============================================================
+2026-06-28 09:22:18 | INFO     | datasets.dataloader | Loading split DataFrames...
+2026-06-28 09:22:18 | INFO     | datasets.dataloader | Split sizes — train: 412 | val: 88 | test: 89 | full: 589
+2026-06-28 09:22:18 | INFO     | datasets.dataloader | Loaded embedding index: 589 entries.
+2026-06-28 09:22:18 | INFO     | datasets.dataloader | Building datasets...
+2026-06-28 09:22:18 | INFO     | datasets.stock_dataset | Dataset built: 382 valid samples | excluded 30 (no history) | 0 (no embedding)
+2026-06-28 09:22:18 | INFO     | datasets.stock_dataset | Dataset built: 88 valid samples | excluded 0 (no history) | 0 (no embedding)
+2026-06-28 09:22:18 | INFO     | datasets.stock_dataset | Dataset built: 89 valid samples | excluded 0 (no history) | 0 (no embedding)
+2026-06-28 09:22:18 | INFO     | datasets.dataloader | Dataset sizes — train: 382 | val: 88 | test: 89
+2026-06-28 09:22:18 | INFO     | datasets.dataloader | DataLoaders ready — batch_size=32 | train_batches=12 | val_batches=3 | test_batches=3
+2026-06-28 09:22:18 | INFO     | __main__ | Evaluating: price_only_h64 (ckpt: checkpoints/price_only_h64_best.pt)
+2026-06-28 09:22:19 | INFO     | evaluation.evaluator | ==================================================
+2026-06-28 09:22:19 | INFO     | evaluation.evaluator | TEST RESULTS: price_only_h64
+2026-06-28 09:22:19 | INFO     | evaluation.evaluator |   Accuracy  : 0.5056
+2026-06-28 09:22:19 | INFO     | evaluation.evaluator |   Precision : 0.2528 (macro)
+2026-06-28 09:22:19 | INFO     | evaluation.evaluator |   Recall    : 0.5000 (macro)
+2026-06-28 09:22:19 | INFO     | evaluation.evaluator |   F1        : 0.3358 (macro)
+2026-06-28 09:22:19 | INFO     | evaluation.evaluator |   ROC-AUC   : 0.5242
+2026-06-28 09:22:19 | INFO     | evaluation.evaluator |   Pred dist : class0=0, class1=89
+2026-06-28 09:22:19 | INFO     | evaluation.evaluator | 
+              precision    recall  f1-score   support
+
+    Down (0)       0.00      0.00      0.00        44
+      Up (1)       0.51      1.00      0.67        45
+
+    accuracy                           0.51        89
+   macro avg       0.25      0.50      0.34        89
+weighted avg       0.26      0.51      0.34        89
+
+2026-06-28 09:22:19 | INFO     | __main__ | Saved confusion matrix: evaluation/plots/confusion_matrix_price_only_h64.png
+2026-06-28 09:22:19 | INFO     | __main__ | Saved loss curve: evaluation/plots/loss_curve_price_only_h64.png
+2026-06-28 09:22:19 | INFO     | __main__ | Evaluating: price_only_h128 (ckpt: checkpoints/price_only_h128_best.pt)
+2026-06-28 09:22:19 | INFO     | evaluation.evaluator | ==================================================
+2026-06-28 09:22:19 | INFO     | evaluation.evaluator | TEST RESULTS: price_only_h128
+2026-06-28 09:22:19 | INFO     | evaluation.evaluator |   Accuracy  : 0.5056
+2026-06-28 09:22:19 | INFO     | evaluation.evaluator |   Precision : 0.2528 (macro)
+2026-06-28 09:22:19 | INFO     | evaluation.evaluator |   Recall    : 0.5000 (macro)
+2026-06-28 09:22:19 | INFO     | evaluation.evaluator |   F1        : 0.3358 (macro)
+2026-06-28 09:22:19 | INFO     | evaluation.evaluator |   ROC-AUC   : 0.5806
+2026-06-28 09:22:19 | INFO     | evaluation.evaluator |   Pred dist : class0=0, class1=89
+2026-06-28 09:22:19 | INFO     | evaluation.evaluator | 
+              precision    recall  f1-score   support
+
+    Down (0)       0.00      0.00      0.00        44
+      Up (1)       0.51      1.00      0.67        45
+
+    accuracy                           0.51        89
+   macro avg       0.25      0.50      0.34        89
+weighted avg       0.26      0.51      0.34        89
+
+2026-06-28 09:22:19 | INFO     | __main__ | Saved confusion matrix: evaluation/plots/confusion_matrix_price_only_h128.png
+2026-06-28 09:22:19 | INFO     | __main__ | Saved loss curve: evaluation/plots/loss_curve_price_only_h128.png
+2026-06-28 09:22:19 | INFO     | __main__ | Evaluating: price_only_h256 (ckpt: checkpoints/price_only_h256_best.pt)
+2026-06-28 09:22:19 | INFO     | evaluation.evaluator | ==================================================
+2026-06-28 09:22:19 | INFO     | evaluation.evaluator | TEST RESULTS: price_only_h256
+2026-06-28 09:22:19 | INFO     | evaluation.evaluator |   Accuracy  : 0.5056
+2026-06-28 09:22:19 | INFO     | evaluation.evaluator |   Precision : 0.2528 (macro)
+2026-06-28 09:22:19 | INFO     | evaluation.evaluator |   Recall    : 0.5000 (macro)
+2026-06-28 09:22:19 | INFO     | evaluation.evaluator |   F1        : 0.3358 (macro)
+2026-06-28 09:22:19 | INFO     | evaluation.evaluator |   ROC-AUC   : 0.6253
+2026-06-28 09:22:19 | INFO     | evaluation.evaluator |   Pred dist : class0=0, class1=89
+2026-06-28 09:22:19 | INFO     | evaluation.evaluator | 
+              precision    recall  f1-score   support
+
+    Down (0)       0.00      0.00      0.00        44
+      Up (1)       0.51      1.00      0.67        45
+
+    accuracy                           0.51        89
+   macro avg       0.25      0.50      0.34        89
+weighted avg       0.26      0.51      0.34        89
+
+2026-06-28 09:22:20 | INFO     | __main__ | Saved confusion matrix: evaluation/plots/confusion_matrix_price_only_h256.png
+2026-06-28 09:22:20 | INFO     | __main__ | Saved loss curve: evaluation/plots/loss_curve_price_only_h256.png
+2026-06-28 09:22:20 | INFO     | __main__ | Evaluating: text_only_h64 (ckpt: checkpoints/text_only_h64_best.pt)
+2026-06-28 09:22:20 | INFO     | evaluation.evaluator | ==================================================
+2026-06-28 09:22:20 | INFO     | evaluation.evaluator | TEST RESULTS: text_only_h64
+2026-06-28 09:22:20 | INFO     | evaluation.evaluator |   Accuracy  : 0.5056
+2026-06-28 09:22:20 | INFO     | evaluation.evaluator |   Precision : 0.2528 (macro)
+2026-06-28 09:22:20 | INFO     | evaluation.evaluator |   Recall    : 0.5000 (macro)
+2026-06-28 09:22:20 | INFO     | evaluation.evaluator |   F1        : 0.3358 (macro)
+2026-06-28 09:22:20 | INFO     | evaluation.evaluator |   ROC-AUC   : 0.4631
+2026-06-28 09:22:20 | INFO     | evaluation.evaluator |   Pred dist : class0=0, class1=89
+2026-06-28 09:22:20 | INFO     | evaluation.evaluator | 
+              precision    recall  f1-score   support
+
+    Down (0)       0.00      0.00      0.00        44
+      Up (1)       0.51      1.00      0.67        45
+
+    accuracy                           0.51        89
+   macro avg       0.25      0.50      0.34        89
+weighted avg       0.26      0.51      0.34        89
+
+2026-06-28 09:22:20 | INFO     | __main__ | Saved confusion matrix: evaluation/plots/confusion_matrix_text_only_h64.png
+2026-06-28 09:22:20 | INFO     | __main__ | Saved loss curve: evaluation/plots/loss_curve_text_only_h64.png
+2026-06-28 09:22:20 | INFO     | __main__ | Evaluating: text_only_h128 (ckpt: checkpoints/text_only_h64_best.pt)
+2026-06-28 09:22:20 | INFO     | evaluation.evaluator | ==================================================
+2026-06-28 09:22:20 | INFO     | evaluation.evaluator | TEST RESULTS: text_only_h128
+2026-06-28 09:22:20 | INFO     | evaluation.evaluator |   Accuracy  : 0.5056
+2026-06-28 09:22:20 | INFO     | evaluation.evaluator |   Precision : 0.2528 (macro)
+2026-06-28 09:22:20 | INFO     | evaluation.evaluator |   Recall    : 0.5000 (macro)
+2026-06-28 09:22:20 | INFO     | evaluation.evaluator |   F1        : 0.3358 (macro)
+2026-06-28 09:22:20 | INFO     | evaluation.evaluator |   ROC-AUC   : 0.4631
+2026-06-28 09:22:20 | INFO     | evaluation.evaluator |   Pred dist : class0=0, class1=89
+2026-06-28 09:22:20 | INFO     | evaluation.evaluator | 
+              precision    recall  f1-score   support
+
+    Down (0)       0.00      0.00      0.00        44
+      Up (1)       0.51      1.00      0.67        45
+
+    accuracy                           0.51        89
+   macro avg       0.25      0.50      0.34        89
+weighted avg       0.26      0.51      0.34        89
+
+2026-06-28 09:22:20 | INFO     | __main__ | Saved confusion matrix: evaluation/plots/confusion_matrix_text_only_h128.png
+2026-06-28 09:22:20 | INFO     | __main__ | Saved loss curve: evaluation/plots/loss_curve_text_only_h128.png
+2026-06-28 09:22:20 | INFO     | __main__ | Evaluating: text_only_h256 (ckpt: checkpoints/text_only_h64_best.pt)
+2026-06-28 09:22:20 | INFO     | evaluation.evaluator | ==================================================
+2026-06-28 09:22:20 | INFO     | evaluation.evaluator | TEST RESULTS: text_only_h256
+2026-06-28 09:22:20 | INFO     | evaluation.evaluator |   Accuracy  : 0.5056
+2026-06-28 09:22:20 | INFO     | evaluation.evaluator |   Precision : 0.2528 (macro)
+2026-06-28 09:22:20 | INFO     | evaluation.evaluator |   Recall    : 0.5000 (macro)
+2026-06-28 09:22:20 | INFO     | evaluation.evaluator |   F1        : 0.3358 (macro)
+2026-06-28 09:22:20 | INFO     | evaluation.evaluator |   ROC-AUC   : 0.4631
+2026-06-28 09:22:20 | INFO     | evaluation.evaluator |   Pred dist : class0=0, class1=89
+2026-06-28 09:22:20 | INFO     | evaluation.evaluator | 
+              precision    recall  f1-score   support
+
+    Down (0)       0.00      0.00      0.00        44
+      Up (1)       0.51      1.00      0.67        45
+
+    accuracy                           0.51        89
+   macro avg       0.25      0.50      0.34        89
+weighted avg       0.26      0.51      0.34        89
+
+2026-06-28 09:22:20 | INFO     | __main__ | Saved confusion matrix: evaluation/plots/confusion_matrix_text_only_h256.png
+2026-06-28 09:22:20 | INFO     | __main__ | Saved loss curve: evaluation/plots/loss_curve_text_only_h256.png
+2026-06-28 09:22:20 | INFO     | __main__ | Evaluating: fusion_h64 (ckpt: checkpoints/fusion_h64_best.pt)
+2026-06-28 09:22:20 | INFO     | evaluation.evaluator | ==================================================
+2026-06-28 09:22:20 | INFO     | evaluation.evaluator | TEST RESULTS: fusion_h64
+2026-06-28 09:22:20 | INFO     | evaluation.evaluator |   Accuracy  : 0.5056
+2026-06-28 09:22:20 | INFO     | evaluation.evaluator |   Precision : 0.2528 (macro)
+2026-06-28 09:22:20 | INFO     | evaluation.evaluator |   Recall    : 0.5000 (macro)
+2026-06-28 09:22:20 | INFO     | evaluation.evaluator |   F1        : 0.3358 (macro)
+2026-06-28 09:22:20 | INFO     | evaluation.evaluator |   ROC-AUC   : 0.4763
+2026-06-28 09:22:20 | INFO     | evaluation.evaluator |   Pred dist : class0=0, class1=89
+2026-06-28 09:22:20 | INFO     | evaluation.evaluator | 
+              precision    recall  f1-score   support
+
+    Down (0)       0.00      0.00      0.00        44
+      Up (1)       0.51      1.00      0.67        45
+
+    accuracy                           0.51        89
+   macro avg       0.25      0.50      0.34        89
+weighted avg       0.26      0.51      0.34        89
+
+2026-06-28 09:22:21 | INFO     | __main__ | Saved confusion matrix: evaluation/plots/confusion_matrix_fusion_h64.png
+2026-06-28 09:22:21 | INFO     | __main__ | Saved loss curve: evaluation/plots/loss_curve_fusion_h64.png
+2026-06-28 09:22:21 | INFO     | __main__ | Evaluating: fusion_h128 (ckpt: checkpoints/fusion_h128_best.pt)
+2026-06-28 09:22:21 | INFO     | evaluation.evaluator | ==================================================
+2026-06-28 09:22:21 | INFO     | evaluation.evaluator | TEST RESULTS: fusion_h128
+2026-06-28 09:22:21 | INFO     | evaluation.evaluator |   Accuracy  : 0.5056
+2026-06-28 09:22:21 | INFO     | evaluation.evaluator |   Precision : 0.2528 (macro)
+2026-06-28 09:22:21 | INFO     | evaluation.evaluator |   Recall    : 0.5000 (macro)
+2026-06-28 09:22:21 | INFO     | evaluation.evaluator |   F1        : 0.3358 (macro)
+2026-06-28 09:22:21 | INFO     | evaluation.evaluator |   ROC-AUC   : 0.4525
+2026-06-28 09:22:21 | INFO     | evaluation.evaluator |   Pred dist : class0=0, class1=89
+2026-06-28 09:22:21 | INFO     | evaluation.evaluator | 
+              precision    recall  f1-score   support
+
+    Down (0)       0.00      0.00      0.00        44
+      Up (1)       0.51      1.00      0.67        45
+
+    accuracy                           0.51        89
+   macro avg       0.25      0.50      0.34        89
+weighted avg       0.26      0.51      0.34        89
+
+2026-06-28 09:22:21 | INFO     | __main__ | Saved confusion matrix: evaluation/plots/confusion_matrix_fusion_h128.png
+2026-06-28 09:22:21 | INFO     | __main__ | Saved loss curve: evaluation/plots/loss_curve_fusion_h128.png
+2026-06-28 09:22:21 | INFO     | __main__ | Evaluating: fusion_h256 (ckpt: checkpoints/fusion_h256_best.pt)
+2026-06-28 09:22:21 | INFO     | evaluation.evaluator | ==================================================
+2026-06-28 09:22:21 | INFO     | evaluation.evaluator | TEST RESULTS: fusion_h256
+2026-06-28 09:22:21 | INFO     | evaluation.evaluator |   Accuracy  : 0.5056
+2026-06-28 09:22:21 | INFO     | evaluation.evaluator |   Precision : 0.2528 (macro)
+2026-06-28 09:22:21 | INFO     | evaluation.evaluator |   Recall    : 0.5000 (macro)
+2026-06-28 09:22:21 | INFO     | evaluation.evaluator |   F1        : 0.3358 (macro)
+2026-06-28 09:22:21 | INFO     | evaluation.evaluator |   ROC-AUC   : 0.4444
+2026-06-28 09:22:21 | INFO     | evaluation.evaluator |   Pred dist : class0=0, class1=89
+2026-06-28 09:22:21 | INFO     | evaluation.evaluator | 
+              precision    recall  f1-score   support
+
+    Down (0)       0.00      0.00      0.00        44
+      Up (1)       0.51      1.00      0.67        45
+
+    accuracy                           0.51        89
+   macro avg       0.25      0.50      0.34        89
+weighted avg       0.26      0.51      0.34        89
+
+2026-06-28 09:22:21 | INFO     | __main__ | Saved confusion matrix: evaluation/plots/confusion_matrix_fusion_h256.png
+2026-06-28 09:22:21 | INFO     | __main__ | Saved loss curve: evaluation/plots/loss_curve_fusion_h256.png
+2026-06-28 09:22:21 | INFO     | __main__ | Full test results saved to evaluation/test_results.csv
+2026-06-28 09:24:28 | INFO     | __main__ | ============================================================
+2026-06-28 09:24:28 | INFO     | __main__ | PHASE 5 — Evaluation & Visualisation
+2026-06-28 09:24:28 | INFO     | __main__ | Device: mps
+2026-06-28 09:24:28 | INFO     | __main__ | ============================================================
+2026-06-28 09:24:28 | INFO     | datasets.dataloader | Loading split DataFrames...
+2026-06-28 09:24:28 | INFO     | datasets.dataloader | Split sizes — train: 412 | val: 88 | test: 89 | full: 589
+2026-06-28 09:24:28 | INFO     | datasets.dataloader | Loaded embedding index: 589 entries.
+2026-06-28 09:24:28 | INFO     | datasets.dataloader | Building datasets...
+2026-06-28 09:24:28 | INFO     | datasets.stock_dataset | Dataset built: 382 valid samples | excluded 30 (no history) | 0 (no embedding)
+2026-06-28 09:24:28 | INFO     | datasets.stock_dataset | Dataset built: 88 valid samples | excluded 0 (no history) | 0 (no embedding)
+2026-06-28 09:24:28 | INFO     | datasets.stock_dataset | Dataset built: 89 valid samples | excluded 0 (no history) | 0 (no embedding)
+2026-06-28 09:24:28 | INFO     | datasets.dataloader | Dataset sizes — train: 382 | val: 88 | test: 89
+2026-06-28 09:24:28 | INFO     | datasets.dataloader | DataLoaders ready — batch_size=32 | train_batches=12 | val_batches=3 | test_batches=3
+2026-06-28 09:24:28 | INFO     | __main__ | Evaluating: price_only_h64 (ckpt: checkpoints/price_only_h64_best.pt)
+2026-06-28 09:24:28 | INFO     | evaluation.evaluator | ==================================================
+2026-06-28 09:24:28 | INFO     | evaluation.evaluator | TEST RESULTS: price_only_h64
+2026-06-28 09:24:28 | INFO     | evaluation.evaluator |   Accuracy  : 0.5056
+2026-06-28 09:24:28 | INFO     | evaluation.evaluator |   Precision : 0.2528 (macro)
+2026-06-28 09:24:28 | INFO     | evaluation.evaluator |   Recall    : 0.5000 (macro)
+2026-06-28 09:24:28 | INFO     | evaluation.evaluator |   F1        : 0.3358 (macro)
+2026-06-28 09:24:28 | INFO     | evaluation.evaluator |   ROC-AUC   : 0.5242
+2026-06-28 09:24:28 | INFO     | evaluation.evaluator |   Pred dist : class0=0, class1=89
+2026-06-28 09:24:28 | INFO     | evaluation.evaluator | 
+              precision    recall  f1-score   support
+
+    Down (0)       0.00      0.00      0.00        44
+      Up (1)       0.51      1.00      0.67        45
+
+    accuracy                           0.51        89
+   macro avg       0.25      0.50      0.34        89
+weighted avg       0.26      0.51      0.34        89
+
+2026-06-28 09:24:28 | INFO     | __main__ | Saved confusion matrix: evaluation/plots/confusion_matrix_price_only_h64.png
+2026-06-28 09:24:29 | INFO     | __main__ | Saved loss curve: evaluation/plots/loss_curve_price_only_h64.png
+2026-06-28 09:24:29 | INFO     | __main__ | Evaluating: price_only_h128 (ckpt: checkpoints/price_only_h128_best.pt)
+2026-06-28 09:24:29 | INFO     | evaluation.evaluator | ==================================================
+2026-06-28 09:24:29 | INFO     | evaluation.evaluator | TEST RESULTS: price_only_h128
+2026-06-28 09:24:29 | INFO     | evaluation.evaluator |   Accuracy  : 0.5056
+2026-06-28 09:24:29 | INFO     | evaluation.evaluator |   Precision : 0.2528 (macro)
+2026-06-28 09:24:29 | INFO     | evaluation.evaluator |   Recall    : 0.5000 (macro)
+2026-06-28 09:24:29 | INFO     | evaluation.evaluator |   F1        : 0.3358 (macro)
+2026-06-28 09:24:29 | INFO     | evaluation.evaluator |   ROC-AUC   : 0.5806
+2026-06-28 09:24:29 | INFO     | evaluation.evaluator |   Pred dist : class0=0, class1=89
+2026-06-28 09:24:29 | INFO     | evaluation.evaluator | 
+              precision    recall  f1-score   support
+
+    Down (0)       0.00      0.00      0.00        44
+      Up (1)       0.51      1.00      0.67        45
+
+    accuracy                           0.51        89
+   macro avg       0.25      0.50      0.34        89
+weighted avg       0.26      0.51      0.34        89
+
+2026-06-28 09:24:29 | INFO     | __main__ | Saved confusion matrix: evaluation/plots/confusion_matrix_price_only_h128.png
+2026-06-28 09:24:29 | INFO     | __main__ | Saved loss curve: evaluation/plots/loss_curve_price_only_h128.png
+2026-06-28 09:24:29 | INFO     | __main__ | Evaluating: price_only_h256 (ckpt: checkpoints/price_only_h256_best.pt)
+2026-06-28 09:24:29 | INFO     | evaluation.evaluator | ==================================================
+2026-06-28 09:24:29 | INFO     | evaluation.evaluator | TEST RESULTS: price_only_h256
+2026-06-28 09:24:29 | INFO     | evaluation.evaluator |   Accuracy  : 0.5056
+2026-06-28 09:24:29 | INFO     | evaluation.evaluator |   Precision : 0.2528 (macro)
+2026-06-28 09:24:29 | INFO     | evaluation.evaluator |   Recall    : 0.5000 (macro)
+2026-06-28 09:24:29 | INFO     | evaluation.evaluator |   F1        : 0.3358 (macro)
+2026-06-28 09:24:29 | INFO     | evaluation.evaluator |   ROC-AUC   : 0.6253
+2026-06-28 09:24:29 | INFO     | evaluation.evaluator |   Pred dist : class0=0, class1=89
+2026-06-28 09:24:29 | INFO     | evaluation.evaluator | 
+              precision    recall  f1-score   support
+
+    Down (0)       0.00      0.00      0.00        44
+      Up (1)       0.51      1.00      0.67        45
+
+    accuracy                           0.51        89
+   macro avg       0.25      0.50      0.34        89
+weighted avg       0.26      0.51      0.34        89
+
+2026-06-28 09:24:29 | INFO     | __main__ | Saved confusion matrix: evaluation/plots/confusion_matrix_price_only_h256.png
+2026-06-28 09:24:29 | INFO     | __main__ | Saved loss curve: evaluation/plots/loss_curve_price_only_h256.png
+2026-06-28 09:24:29 | INFO     | __main__ | Evaluating: text_only_h64 (ckpt: checkpoints/text_only_h64_best.pt)
+2026-06-28 09:24:29 | INFO     | evaluation.evaluator | ==================================================
+2026-06-28 09:24:29 | INFO     | evaluation.evaluator | TEST RESULTS: text_only_h64
+2026-06-28 09:24:29 | INFO     | evaluation.evaluator |   Accuracy  : 0.5056
+2026-06-28 09:24:29 | INFO     | evaluation.evaluator |   Precision : 0.2528 (macro)
+2026-06-28 09:24:29 | INFO     | evaluation.evaluator |   Recall    : 0.5000 (macro)
+2026-06-28 09:24:29 | INFO     | evaluation.evaluator |   F1        : 0.3358 (macro)
+2026-06-28 09:24:29 | INFO     | evaluation.evaluator |   ROC-AUC   : 0.4631
+2026-06-28 09:24:29 | INFO     | evaluation.evaluator |   Pred dist : class0=0, class1=89
+2026-06-28 09:24:29 | INFO     | evaluation.evaluator | 
+              precision    recall  f1-score   support
+
+    Down (0)       0.00      0.00      0.00        44
+      Up (1)       0.51      1.00      0.67        45
+
+    accuracy                           0.51        89
+   macro avg       0.25      0.50      0.34        89
+weighted avg       0.26      0.51      0.34        89
+
+2026-06-28 09:24:29 | INFO     | __main__ | Saved confusion matrix: evaluation/plots/confusion_matrix_text_only_h64.png
+2026-06-28 09:24:29 | INFO     | __main__ | Saved loss curve: evaluation/plots/loss_curve_text_only_h64.png
+2026-06-28 09:24:29 | INFO     | __main__ | Evaluating: text_only_h128 (ckpt: checkpoints/text_only_h64_best.pt)
+2026-06-28 09:24:29 | INFO     | evaluation.evaluator | ==================================================
+2026-06-28 09:24:29 | INFO     | evaluation.evaluator | TEST RESULTS: text_only_h128
+2026-06-28 09:24:29 | INFO     | evaluation.evaluator |   Accuracy  : 0.5056
+2026-06-28 09:24:29 | INFO     | evaluation.evaluator |   Precision : 0.2528 (macro)
+2026-06-28 09:24:29 | INFO     | evaluation.evaluator |   Recall    : 0.5000 (macro)
+2026-06-28 09:24:29 | INFO     | evaluation.evaluator |   F1        : 0.3358 (macro)
+2026-06-28 09:24:29 | INFO     | evaluation.evaluator |   ROC-AUC   : 0.4631
+2026-06-28 09:24:29 | INFO     | evaluation.evaluator |   Pred dist : class0=0, class1=89
+2026-06-28 09:24:29 | INFO     | evaluation.evaluator | 
+              precision    recall  f1-score   support
+
+    Down (0)       0.00      0.00      0.00        44
+      Up (1)       0.51      1.00      0.67        45
+
+    accuracy                           0.51        89
+   macro avg       0.25      0.50      0.34        89
+weighted avg       0.26      0.51      0.34        89
+
+2026-06-28 09:24:29 | INFO     | __main__ | Saved confusion matrix: evaluation/plots/confusion_matrix_text_only_h128.png
+2026-06-28 09:24:30 | INFO     | __main__ | Saved loss curve: evaluation/plots/loss_curve_text_only_h128.png
+2026-06-28 09:24:30 | INFO     | __main__ | Evaluating: text_only_h256 (ckpt: checkpoints/text_only_h64_best.pt)
+2026-06-28 09:24:30 | INFO     | evaluation.evaluator | ==================================================
+2026-06-28 09:24:30 | INFO     | evaluation.evaluator | TEST RESULTS: text_only_h256
+2026-06-28 09:24:30 | INFO     | evaluation.evaluator |   Accuracy  : 0.5056
+2026-06-28 09:24:30 | INFO     | evaluation.evaluator |   Precision : 0.2528 (macro)
+2026-06-28 09:24:30 | INFO     | evaluation.evaluator |   Recall    : 0.5000 (macro)
+2026-06-28 09:24:30 | INFO     | evaluation.evaluator |   F1        : 0.3358 (macro)
+2026-06-28 09:24:30 | INFO     | evaluation.evaluator |   ROC-AUC   : 0.4631
+2026-06-28 09:24:30 | INFO     | evaluation.evaluator |   Pred dist : class0=0, class1=89
+2026-06-28 09:24:30 | INFO     | evaluation.evaluator | 
+              precision    recall  f1-score   support
+
+    Down (0)       0.00      0.00      0.00        44
+      Up (1)       0.51      1.00      0.67        45
+
+    accuracy                           0.51        89
+   macro avg       0.25      0.50      0.34        89
+weighted avg       0.26      0.51      0.34        89
+
+2026-06-28 09:24:30 | INFO     | __main__ | Saved confusion matrix: evaluation/plots/confusion_matrix_text_only_h256.png
+2026-06-28 09:24:30 | INFO     | __main__ | Saved loss curve: evaluation/plots/loss_curve_text_only_h256.png
+2026-06-28 09:24:30 | INFO     | __main__ | Evaluating: fusion_h64 (ckpt: checkpoints/fusion_h64_best.pt)
+2026-06-28 09:24:30 | INFO     | evaluation.evaluator | ==================================================
+2026-06-28 09:24:30 | INFO     | evaluation.evaluator | TEST RESULTS: fusion_h64
+2026-06-28 09:24:30 | INFO     | evaluation.evaluator |   Accuracy  : 0.5056
+2026-06-28 09:24:30 | INFO     | evaluation.evaluator |   Precision : 0.2528 (macro)
+2026-06-28 09:24:30 | INFO     | evaluation.evaluator |   Recall    : 0.5000 (macro)
+2026-06-28 09:24:30 | INFO     | evaluation.evaluator |   F1        : 0.3358 (macro)
+2026-06-28 09:24:30 | INFO     | evaluation.evaluator |   ROC-AUC   : 0.4763
+2026-06-28 09:24:30 | INFO     | evaluation.evaluator |   Pred dist : class0=0, class1=89
+2026-06-28 09:24:30 | INFO     | evaluation.evaluator | 
+              precision    recall  f1-score   support
+
+    Down (0)       0.00      0.00      0.00        44
+      Up (1)       0.51      1.00      0.67        45
+
+    accuracy                           0.51        89
+   macro avg       0.25      0.50      0.34        89
+weighted avg       0.26      0.51      0.34        89
+
+2026-06-28 09:24:30 | INFO     | __main__ | Saved confusion matrix: evaluation/plots/confusion_matrix_fusion_h64.png
+2026-06-28 09:24:30 | INFO     | __main__ | Saved loss curve: evaluation/plots/loss_curve_fusion_h64.png
+2026-06-28 09:24:30 | INFO     | __main__ | Evaluating: fusion_h128 (ckpt: checkpoints/fusion_h128_best.pt)
+2026-06-28 09:24:30 | INFO     | evaluation.evaluator | ==================================================
+2026-06-28 09:24:30 | INFO     | evaluation.evaluator | TEST RESULTS: fusion_h128
+2026-06-28 09:24:30 | INFO     | evaluation.evaluator |   Accuracy  : 0.5056
+2026-06-28 09:24:30 | INFO     | evaluation.evaluator |   Precision : 0.2528 (macro)
+2026-06-28 09:24:30 | INFO     | evaluation.evaluator |   Recall    : 0.5000 (macro)
+2026-06-28 09:24:30 | INFO     | evaluation.evaluator |   F1        : 0.3358 (macro)
+2026-06-28 09:24:30 | INFO     | evaluation.evaluator |   ROC-AUC   : 0.4525
+2026-06-28 09:24:30 | INFO     | evaluation.evaluator |   Pred dist : class0=0, class1=89
+2026-06-28 09:24:30 | INFO     | evaluation.evaluator | 
+              precision    recall  f1-score   support
+
+    Down (0)       0.00      0.00      0.00        44
+      Up (1)       0.51      1.00      0.67        45
+
+    accuracy                           0.51        89
+   macro avg       0.25      0.50      0.34        89
+weighted avg       0.26      0.51      0.34        89
+
+2026-06-28 09:24:30 | INFO     | __main__ | Saved confusion matrix: evaluation/plots/confusion_matrix_fusion_h128.png
+2026-06-28 09:24:30 | INFO     | __main__ | Saved loss curve: evaluation/plots/loss_curve_fusion_h128.png
+2026-06-28 09:24:30 | INFO     | __main__ | Evaluating: fusion_h256 (ckpt: checkpoints/fusion_h256_best.pt)
+2026-06-28 09:24:30 | INFO     | evaluation.evaluator | ==================================================
+2026-06-28 09:24:30 | INFO     | evaluation.evaluator | TEST RESULTS: fusion_h256
+2026-06-28 09:24:30 | INFO     | evaluation.evaluator |   Accuracy  : 0.5056
+2026-06-28 09:24:30 | INFO     | evaluation.evaluator |   Precision : 0.2528 (macro)
+2026-06-28 09:24:30 | INFO     | evaluation.evaluator |   Recall    : 0.5000 (macro)
+2026-06-28 09:24:30 | INFO     | evaluation.evaluator |   F1        : 0.3358 (macro)
+2026-06-28 09:24:30 | INFO     | evaluation.evaluator |   ROC-AUC   : 0.4444
+2026-06-28 09:24:30 | INFO     | evaluation.evaluator |   Pred dist : class0=0, class1=89
+2026-06-28 09:24:30 | INFO     | evaluation.evaluator | 
+              precision    recall  f1-score   support
+
+    Down (0)       0.00      0.00      0.00        44
+      Up (1)       0.51      1.00      0.67        45
+
+    accuracy                           0.51        89
+   macro avg       0.25      0.50      0.34        89
+weighted avg       0.26      0.51      0.34        89
+
+2026-06-28 09:24:31 | INFO     | __main__ | Saved confusion matrix: evaluation/plots/confusion_matrix_fusion_h256.png
+2026-06-28 09:24:31 | INFO     | __main__ | Saved loss curve: evaluation/plots/loss_curve_fusion_h256.png
+2026-06-28 09:24:31 | INFO     | __main__ | Full test results saved to evaluation/test_results.csv
+2026-06-28 09:24:31 | INFO     | __main__ | All comparison plots saved to evaluation/plots/
+2026-06-28 09:30:17 | INFO     | __main__ | ============================================================
+2026-06-28 09:30:17 | INFO     | __main__ | PHASE 5 — Evaluation & Visualisation
+2026-06-28 09:30:17 | INFO     | __main__ | Device: mps
+2026-06-28 09:30:17 | INFO     | __main__ | ============================================================
+2026-06-28 09:30:17 | INFO     | datasets.dataloader | Loading split DataFrames...
+2026-06-28 09:30:17 | INFO     | datasets.dataloader | Split sizes — train: 412 | val: 88 | test: 89 | full: 589
+2026-06-28 09:30:17 | INFO     | datasets.dataloader | Loaded embedding index: 589 entries.
+2026-06-28 09:30:17 | INFO     | datasets.dataloader | Building datasets...
+2026-06-28 09:30:17 | INFO     | datasets.stock_dataset | Dataset built: 382 valid samples | excluded 30 (no history) | 0 (no embedding)
+2026-06-28 09:30:17 | INFO     | datasets.stock_dataset | Dataset built: 88 valid samples | excluded 0 (no history) | 0 (no embedding)
+2026-06-28 09:30:17 | INFO     | datasets.stock_dataset | Dataset built: 89 valid samples | excluded 0 (no history) | 0 (no embedding)
+2026-06-28 09:30:17 | INFO     | datasets.dataloader | Dataset sizes — train: 382 | val: 88 | test: 89
+2026-06-28 09:30:17 | INFO     | datasets.dataloader | DataLoaders ready — batch_size=32 | train_batches=12 | val_batches=3 | test_batches=3
+2026-06-28 09:30:17 | INFO     | __main__ | Evaluating: price_only_h64 (ckpt: checkpoints/price_only_h64_best.pt)
+2026-06-28 09:30:18 | INFO     | evaluation.evaluator | ==================================================
+2026-06-28 09:30:18 | INFO     | evaluation.evaluator | TEST RESULTS: price_only_h64
+2026-06-28 09:30:18 | INFO     | evaluation.evaluator |   Accuracy  : 0.5056
+2026-06-28 09:30:18 | INFO     | evaluation.evaluator |   Precision : 0.2528 (macro)
+2026-06-28 09:30:18 | INFO     | evaluation.evaluator |   Recall    : 0.5000 (macro)
+2026-06-28 09:30:18 | INFO     | evaluation.evaluator |   F1        : 0.3358 (macro)
+2026-06-28 09:30:18 | INFO     | evaluation.evaluator |   ROC-AUC   : 0.5328
+2026-06-28 09:30:18 | INFO     | evaluation.evaluator |   Pred dist : class0=0, class1=89
+2026-06-28 09:30:18 | INFO     | evaluation.evaluator | 
+              precision    recall  f1-score   support
+
+    Down (0)       0.00      0.00      0.00        44
+      Up (1)       0.51      1.00      0.67        45
+
+    accuracy                           0.51        89
+   macro avg       0.25      0.50      0.34        89
+weighted avg       0.26      0.51      0.34        89
+
+2026-06-28 09:30:18 | INFO     | __main__ | Saved confusion matrix: evaluation/plots/confusion_matrix_price_only_h64.png
+2026-06-28 09:30:18 | INFO     | __main__ | Saved loss curve: evaluation/plots/loss_curve_price_only_h64.png
+2026-06-28 09:30:18 | INFO     | __main__ | Evaluating: price_only_h128 (ckpt: checkpoints/price_only_h128_best.pt)
+2026-06-28 09:30:18 | INFO     | evaluation.evaluator | ==================================================
+2026-06-28 09:30:18 | INFO     | evaluation.evaluator | TEST RESULTS: price_only_h128
+2026-06-28 09:30:18 | INFO     | evaluation.evaluator |   Accuracy  : 0.5056
+2026-06-28 09:30:18 | INFO     | evaluation.evaluator |   Precision : 0.2528 (macro)
+2026-06-28 09:30:18 | INFO     | evaluation.evaluator |   Recall    : 0.5000 (macro)
+2026-06-28 09:30:18 | INFO     | evaluation.evaluator |   F1        : 0.3358 (macro)
+2026-06-28 09:30:18 | INFO     | evaluation.evaluator |   ROC-AUC   : 0.5798
+2026-06-28 09:30:18 | INFO     | evaluation.evaluator |   Pred dist : class0=0, class1=89
+2026-06-28 09:30:18 | INFO     | evaluation.evaluator | 
+              precision    recall  f1-score   support
+
+    Down (0)       0.00      0.00      0.00        44
+      Up (1)       0.51      1.00      0.67        45
+
+    accuracy                           0.51        89
+   macro avg       0.25      0.50      0.34        89
+weighted avg       0.26      0.51      0.34        89
+
+2026-06-28 09:30:18 | INFO     | __main__ | Saved confusion matrix: evaluation/plots/confusion_matrix_price_only_h128.png
+2026-06-28 09:30:18 | INFO     | __main__ | Saved loss curve: evaluation/plots/loss_curve_price_only_h128.png
+2026-06-28 09:30:18 | INFO     | __main__ | Evaluating: price_only_h256 (ckpt: checkpoints/price_only_h256_best.pt)
+2026-06-28 09:30:19 | INFO     | evaluation.evaluator | ==================================================
+2026-06-28 09:30:19 | INFO     | evaluation.evaluator | TEST RESULTS: price_only_h256
+2026-06-28 09:30:19 | INFO     | evaluation.evaluator |   Accuracy  : 0.5393
+2026-06-28 09:30:19 | INFO     | evaluation.evaluator |   Precision : 0.5439 (macro)
+2026-06-28 09:30:19 | INFO     | evaluation.evaluator |   Recall    : 0.5371 (macro)
+2026-06-28 09:30:19 | INFO     | evaluation.evaluator |   F1        : 0.5197 (macro)
+2026-06-28 09:30:19 | INFO     | evaluation.evaluator |   ROC-AUC   : 0.5626
+2026-06-28 09:30:19 | INFO     | evaluation.evaluator |   Pred dist : class0=27, class1=62
+2026-06-28 09:30:19 | INFO     | evaluation.evaluator | 
+              precision    recall  f1-score   support
+
+    Down (0)       0.56      0.34      0.42        44
+      Up (1)       0.53      0.73      0.62        45
+
+    accuracy                           0.54        89
+   macro avg       0.54      0.54      0.52        89
+weighted avg       0.54      0.54      0.52        89
+
+2026-06-28 09:30:19 | INFO     | __main__ | Saved confusion matrix: evaluation/plots/confusion_matrix_price_only_h256.png
+2026-06-28 09:30:19 | INFO     | __main__ | Saved loss curve: evaluation/plots/loss_curve_price_only_h256.png
+2026-06-28 09:30:19 | INFO     | __main__ | Evaluating: text_only_h64 (ckpt: checkpoints/text_only_h64_best.pt)
+2026-06-28 09:30:19 | INFO     | evaluation.evaluator | ==================================================
+2026-06-28 09:30:19 | INFO     | evaluation.evaluator | TEST RESULTS: text_only_h64
+2026-06-28 09:30:19 | INFO     | evaluation.evaluator |   Accuracy  : 0.5393
+2026-06-28 09:30:19 | INFO     | evaluation.evaluator |   Precision : 0.5958 (macro)
+2026-06-28 09:30:19 | INFO     | evaluation.evaluator |   Recall    : 0.5348 (macro)
+2026-06-28 09:30:19 | INFO     | evaluation.evaluator |   F1        : 0.4492 (macro)
+2026-06-28 09:30:19 | INFO     | evaluation.evaluator |   ROC-AUC   : 0.4187
+2026-06-28 09:30:19 | INFO     | evaluation.evaluator |   Pred dist : class0=9, class1=80
+2026-06-28 09:30:19 | INFO     | evaluation.evaluator | 
+              precision    recall  f1-score   support
+
+    Down (0)       0.67      0.14      0.23        44
+      Up (1)       0.53      0.93      0.67        45
+
+    accuracy                           0.54        89
+   macro avg       0.60      0.53      0.45        89
+weighted avg       0.60      0.54      0.45        89
+
+2026-06-28 09:30:19 | INFO     | __main__ | Saved confusion matrix: evaluation/plots/confusion_matrix_text_only_h64.png
+2026-06-28 09:30:19 | INFO     | __main__ | Saved loss curve: evaluation/plots/loss_curve_text_only_h64.png
+2026-06-28 09:30:19 | INFO     | __main__ | Evaluating: text_only_h128 (ckpt: checkpoints/text_only_h64_best.pt)
+2026-06-28 09:30:19 | INFO     | evaluation.evaluator | ==================================================
+2026-06-28 09:30:19 | INFO     | evaluation.evaluator | TEST RESULTS: text_only_h128
+2026-06-28 09:30:19 | INFO     | evaluation.evaluator |   Accuracy  : 0.5393
+2026-06-28 09:30:19 | INFO     | evaluation.evaluator |   Precision : 0.5958 (macro)
+2026-06-28 09:30:19 | INFO     | evaluation.evaluator |   Recall    : 0.5348 (macro)
+2026-06-28 09:30:19 | INFO     | evaluation.evaluator |   F1        : 0.4492 (macro)
+2026-06-28 09:30:19 | INFO     | evaluation.evaluator |   ROC-AUC   : 0.4187
+2026-06-28 09:30:19 | INFO     | evaluation.evaluator |   Pred dist : class0=9, class1=80
+2026-06-28 09:30:19 | INFO     | evaluation.evaluator | 
+              precision    recall  f1-score   support
+
+    Down (0)       0.67      0.14      0.23        44
+      Up (1)       0.53      0.93      0.67        45
+
+    accuracy                           0.54        89
+   macro avg       0.60      0.53      0.45        89
+weighted avg       0.60      0.54      0.45        89
+
+2026-06-28 09:30:19 | INFO     | __main__ | Saved confusion matrix: evaluation/plots/confusion_matrix_text_only_h128.png
+2026-06-28 09:30:19 | INFO     | __main__ | Saved loss curve: evaluation/plots/loss_curve_text_only_h128.png
+2026-06-28 09:30:19 | INFO     | __main__ | Evaluating: text_only_h256 (ckpt: checkpoints/text_only_h64_best.pt)
+2026-06-28 09:30:19 | INFO     | evaluation.evaluator | ==================================================
+2026-06-28 09:30:19 | INFO     | evaluation.evaluator | TEST RESULTS: text_only_h256
+2026-06-28 09:30:19 | INFO     | evaluation.evaluator |   Accuracy  : 0.5393
+2026-06-28 09:30:19 | INFO     | evaluation.evaluator |   Precision : 0.5958 (macro)
+2026-06-28 09:30:19 | INFO     | evaluation.evaluator |   Recall    : 0.5348 (macro)
+2026-06-28 09:30:19 | INFO     | evaluation.evaluator |   F1        : 0.4492 (macro)
+2026-06-28 09:30:19 | INFO     | evaluation.evaluator |   ROC-AUC   : 0.4187
+2026-06-28 09:30:19 | INFO     | evaluation.evaluator |   Pred dist : class0=9, class1=80
+2026-06-28 09:30:19 | INFO     | evaluation.evaluator | 
+              precision    recall  f1-score   support
+
+    Down (0)       0.67      0.14      0.23        44
+      Up (1)       0.53      0.93      0.67        45
+
+    accuracy                           0.54        89
+   macro avg       0.60      0.53      0.45        89
+weighted avg       0.60      0.54      0.45        89
+
+2026-06-28 09:30:19 | INFO     | __main__ | Saved confusion matrix: evaluation/plots/confusion_matrix_text_only_h256.png
+2026-06-28 09:30:20 | INFO     | __main__ | Saved loss curve: evaluation/plots/loss_curve_text_only_h256.png
+2026-06-28 09:30:20 | INFO     | __main__ | Evaluating: fusion_h64 (ckpt: checkpoints/fusion_h64_best.pt)
+2026-06-28 09:30:20 | INFO     | evaluation.evaluator | ==================================================
+2026-06-28 09:30:20 | INFO     | evaluation.evaluator | TEST RESULTS: fusion_h64
+2026-06-28 09:30:20 | INFO     | evaluation.evaluator |   Accuracy  : 0.5056
+2026-06-28 09:30:20 | INFO     | evaluation.evaluator |   Precision : 0.2528 (macro)
+2026-06-28 09:30:20 | INFO     | evaluation.evaluator |   Recall    : 0.5000 (macro)
+2026-06-28 09:30:20 | INFO     | evaluation.evaluator |   F1        : 0.3358 (macro)
+2026-06-28 09:30:20 | INFO     | evaluation.evaluator |   ROC-AUC   : 0.4571
+2026-06-28 09:30:20 | INFO     | evaluation.evaluator |   Pred dist : class0=0, class1=89
+2026-06-28 09:30:20 | INFO     | evaluation.evaluator | 
+              precision    recall  f1-score   support
+
+    Down (0)       0.00      0.00      0.00        44
+      Up (1)       0.51      1.00      0.67        45
+
+    accuracy                           0.51        89
+   macro avg       0.25      0.50      0.34        89
+weighted avg       0.26      0.51      0.34        89
+
+2026-06-28 09:30:20 | INFO     | __main__ | Saved confusion matrix: evaluation/plots/confusion_matrix_fusion_h64.png
+2026-06-28 09:30:20 | INFO     | __main__ | Saved loss curve: evaluation/plots/loss_curve_fusion_h64.png
+2026-06-28 09:30:20 | INFO     | __main__ | Evaluating: fusion_h128 (ckpt: checkpoints/fusion_h128_best.pt)
+2026-06-28 09:30:20 | INFO     | evaluation.evaluator | ==================================================
+2026-06-28 09:30:20 | INFO     | evaluation.evaluator | TEST RESULTS: fusion_h128
+2026-06-28 09:30:20 | INFO     | evaluation.evaluator |   Accuracy  : 0.5281
+2026-06-28 09:30:20 | INFO     | evaluation.evaluator |   Precision : 0.6338 (macro)
+2026-06-28 09:30:20 | INFO     | evaluation.evaluator |   Recall    : 0.5230 (macro)
+2026-06-28 09:30:20 | INFO     | evaluation.evaluator |   F1        : 0.4010 (macro)
+2026-06-28 09:30:20 | INFO     | evaluation.evaluator |   ROC-AUC   : 0.4520
+2026-06-28 09:30:20 | INFO     | evaluation.evaluator |   Pred dist : class0=4, class1=85
+2026-06-28 09:30:20 | INFO     | evaluation.evaluator | 
+              precision    recall  f1-score   support
+
+    Down (0)       0.75      0.07      0.12        44
+      Up (1)       0.52      0.98      0.68        45
+
+    accuracy                           0.53        89
+   macro avg       0.63      0.52      0.40        89
+weighted avg       0.63      0.53      0.40        89
+
+2026-06-28 09:30:20 | INFO     | __main__ | Saved confusion matrix: evaluation/plots/confusion_matrix_fusion_h128.png
+2026-06-28 09:30:20 | INFO     | __main__ | Saved loss curve: evaluation/plots/loss_curve_fusion_h128.png
+2026-06-28 09:30:20 | INFO     | __main__ | Evaluating: fusion_h256 (ckpt: checkpoints/fusion_h256_best.pt)
+2026-06-28 09:30:20 | INFO     | evaluation.evaluator | ==================================================
+2026-06-28 09:30:20 | INFO     | evaluation.evaluator | TEST RESULTS: fusion_h256
+2026-06-28 09:30:20 | INFO     | evaluation.evaluator |   Accuracy  : 0.5169
+2026-06-28 09:30:20 | INFO     | evaluation.evaluator |   Precision : 0.5560 (macro)
+2026-06-28 09:30:20 | INFO     | evaluation.evaluator |   Recall    : 0.5119 (macro)
+2026-06-28 09:30:20 | INFO     | evaluation.evaluator |   F1        : 0.3946 (macro)
+2026-06-28 09:30:20 | INFO     | evaluation.evaluator |   ROC-AUC   : 0.4126
+2026-06-28 09:30:20 | INFO     | evaluation.evaluator |   Pred dist : class0=5, class1=84
+2026-06-28 09:30:20 | INFO     | evaluation.evaluator | 
+              precision    recall  f1-score   support
+
+    Down (0)       0.60      0.07      0.12        44
+      Up (1)       0.51      0.96      0.67        45
+
+    accuracy                           0.52        89
+   macro avg       0.56      0.51      0.39        89
+weighted avg       0.56      0.52      0.40        89
+
+2026-06-28 09:30:20 | INFO     | __main__ | Saved confusion matrix: evaluation/plots/confusion_matrix_fusion_h256.png
+2026-06-28 09:30:20 | INFO     | __main__ | Saved loss curve: evaluation/plots/loss_curve_fusion_h256.png
+2026-06-28 09:30:20 | INFO     | __main__ | Full test results saved to evaluation/test_results.csv
+2026-06-28 09:30:21 | INFO     | __main__ | All comparison plots saved to evaluation/plots/

@@ -1,0 +1,204 @@
+2026-06-27 14:59:32 | INFO     | data.pipeline | ============================================================
+2026-06-27 14:59:32 | INFO     | data.pipeline | PHASE 1 — Data Scraping & Alignment
+2026-06-27 14:59:32 | INFO     | data.pipeline | Ticker: AAPL | 2018-01-01 → 2023-12-31
+2026-06-27 14:59:32 | INFO     | data.pipeline | ============================================================
+2026-06-27 14:59:32 | INFO     | data.downloader | Downloading AAPL from 2018-01-01 to 2023-12-31 via yfinance...
+2026-06-27 14:59:35 | INFO     | data.downloader | Downloaded 1509 trading days for AAPL. Saved to data/raw/raw_ohlcv.csv.
+2026-06-27 14:59:35 | INFO     | data.indicators | Indicators computed. Dropped 19 warm-up rows (expected ~26). 1490 rows remaining.
+2026-06-27 14:59:35 | DEBUG    | data.indicators | Feature columns present: ['Open', 'High', 'Low', 'Close', 'Volume', 'RSI', 'MACD', 'MACD_Signal', 'MACD_Hist', 'SMA10', 'SMA20', 'EMA10', 'EMA20']
+2026-06-27 14:59:35 | INFO     | data.labeler | Labels generated (ε=0.0000): 1489 total | 796 positive (53.5%) | 693 negative (46.5%)
+2026-06-27 14:59:35 | INFO     | data.pipeline | Aligned dataset saved to data/processed/aligned_dataset.csv (1489 rows).
+2026-06-27 14:59:35 | INFO     | data.splitter | Chronological split complete:
+2026-06-27 14:59:35 | INFO     | data.splitter |   TRAIN | n=1042 | 2018-01-31 → 2022-03-21 | 53.8% positive
+2026-06-27 14:59:35 | INFO     | data.splitter |   VAL   | n=223  | 2022-03-22 → 2023-02-08 | 50.7% positive
+2026-06-27 14:59:35 | INFO     | data.splitter |   TEST  | n=224  | 2023-02-09 → 2023-12-29 | 54.5% positive
+2026-06-27 14:59:35 | INFO     | data.splitter | Split info saved to configs/split_info.json
+2026-06-27 14:59:35 | INFO     | data.labeler | Class balance in training set: 53.8% positive / 46.2% negative — within threshold.
+2026-06-27 14:59:35 | INFO     | data.labeler | Class balance in validation set: 50.7% positive / 49.3% negative — within threshold.
+2026-06-27 14:59:35 | INFO     | data.labeler | Class balance in test set: 54.5% positive / 45.5% negative — within threshold.
+2026-06-27 14:59:35 | INFO     | data.labeler | Class 0: n=481, weight=1.0832
+2026-06-27 14:59:35 | INFO     | data.labeler | Class 1: n=561, weight=0.9287
+2026-06-27 14:59:35 | INFO     | data.labeler | Class weights saved to configs/class_weights.pt: [w0=1.0832, w1=0.9287]
+2026-06-27 14:59:35 | INFO     | data.splitter | MinMaxScaler fit on training set (1042 rows, 13 features).
+2026-06-27 14:59:35 | DEBUG    | data.splitter | Scaled train set (1042 rows).
+2026-06-27 14:59:35 | DEBUG    | data.splitter | Scaled val set (223 rows).
+2026-06-27 14:59:35 | DEBUG    | data.splitter | Scaled test set (224 rows).
+2026-06-27 14:59:35 | INFO     | data.splitter | MinMaxScaler saved to checkpoints/scaler.pkl
+2026-06-27 14:59:35 | INFO     | data.pipeline | Saved scaled train split to data/train_scaled.csv.
+2026-06-27 14:59:35 | INFO     | data.pipeline | Saved scaled val split to data/val_scaled.csv.
+2026-06-27 14:59:35 | INFO     | data.pipeline | Saved scaled test split to data/test_scaled.csv.
+2026-06-27 14:59:35 | INFO     | data.pipeline | ============================================================
+2026-06-27 14:59:35 | INFO     | data.pipeline | PHASE 1 COMPLETE.
+2026-06-27 14:59:35 | INFO     | data.pipeline | Train: 1042 rows | Val: 223 rows | Test: 224 rows
+2026-06-27 14:59:35 | INFO     | data.pipeline | Class weights → w0=1.0832  w1=0.9287
+2026-06-27 14:59:35 | INFO     | data.pipeline | ============================================================
+2026-06-27 20:10:11 | INFO     | data.pipeline | ============================================================
+2026-06-27 20:10:11 | INFO     | data.pipeline | PHASE 1 — Data Scraping & Alignment
+2026-06-27 20:10:11 | INFO     | data.pipeline | Ticker: AAPL | 2018-01-01 → 2023-12-31
+2026-06-27 20:10:11 | INFO     | data.pipeline | ============================================================
+2026-06-27 20:10:11 | INFO     | data.downloader | Raw OHLCV file already exists at data/raw/raw_ohlcv.csv — skipping download.
+2026-06-27 20:10:11 | INFO     | data.downloader | Loaded 1509 rows from cache.
+2026-06-27 20:10:11 | INFO     | data.indicators | Indicators computed. Dropped 19 warm-up rows (expected ~26). 1490 rows remaining.
+2026-06-27 20:10:11 | DEBUG    | data.indicators | Feature columns present: ['Open', 'High', 'Low', 'Close', 'Volume', 'RSI', 'MACD', 'MACD_Signal', 'MACD_Hist', 'SMA10', 'SMA20', 'EMA10', 'EMA20']
+2026-06-27 20:10:11 | INFO     | data.labeler | Labels generated (ε=0.0000): 1489 total | 796 positive (53.5%) | 693 negative (46.5%)
+2026-06-27 20:10:12 | INFO     | data.pipeline | Aligned dataset saved to data/processed/aligned_dataset.csv (1489 rows).
+2026-06-27 20:10:12 | INFO     | data.splitter | Chronological split complete:
+2026-06-27 20:10:12 | INFO     | data.splitter |   TRAIN | n=1042 | 2018-01-31 → 2022-03-21 | 53.8% positive
+2026-06-27 20:10:12 | INFO     | data.splitter |   VAL   | n=223  | 2022-03-22 → 2023-02-08 | 50.7% positive
+2026-06-27 20:10:12 | INFO     | data.splitter |   TEST  | n=224  | 2023-02-09 → 2023-12-29 | 54.5% positive
+2026-06-27 20:10:12 | INFO     | data.splitter | Split info saved to configs/split_info.json
+2026-06-27 20:10:12 | INFO     | data.labeler | Class balance in training set: 53.8% positive / 46.2% negative — within threshold.
+2026-06-27 20:10:12 | INFO     | data.labeler | Class balance in validation set: 50.7% positive / 49.3% negative — within threshold.
+2026-06-27 20:10:12 | INFO     | data.labeler | Class balance in test set: 54.5% positive / 45.5% negative — within threshold.
+2026-06-27 20:10:12 | INFO     | data.labeler | Class 0: n=481, weight=1.0832
+2026-06-27 20:10:12 | INFO     | data.labeler | Class 1: n=561, weight=0.9287
+2026-06-27 20:10:12 | INFO     | data.labeler | Class weights saved to configs/class_weights.pt: [w0=1.0832, w1=0.9287]
+2026-06-27 20:10:12 | INFO     | data.splitter | MinMaxScaler fit on training set (1042 rows, 13 features).
+2026-06-27 20:10:12 | DEBUG    | data.splitter | Scaled train set (1042 rows).
+2026-06-27 20:10:12 | DEBUG    | data.splitter | Scaled val set (223 rows).
+2026-06-27 20:10:12 | DEBUG    | data.splitter | Scaled test set (224 rows).
+2026-06-27 20:10:12 | INFO     | data.splitter | MinMaxScaler saved to checkpoints/scaler.pkl
+2026-06-27 20:10:12 | INFO     | data.pipeline | Saved scaled train split to data/train_scaled.csv.
+2026-06-27 20:10:12 | INFO     | data.pipeline | Saved scaled val split to data/val_scaled.csv.
+2026-06-27 20:10:12 | INFO     | data.pipeline | Saved scaled test split to data/test_scaled.csv.
+2026-06-27 20:10:12 | INFO     | data.pipeline | ============================================================
+2026-06-27 20:10:12 | INFO     | data.pipeline | PHASE 1 COMPLETE.
+2026-06-27 20:10:12 | INFO     | data.pipeline | Train: 1042 rows | Val: 223 rows | Test: 224 rows
+2026-06-27 20:10:12 | INFO     | data.pipeline | Class weights → w0=1.0832  w1=0.9287
+2026-06-27 20:10:12 | INFO     | data.pipeline | ============================================================
+2026-06-27 20:12:37 | INFO     | data.pipeline | ============================================================
+2026-06-27 20:12:37 | INFO     | data.pipeline | PHASE 1 — Data Scraping & Alignment
+2026-06-27 20:12:37 | INFO     | data.pipeline | Ticker: AAPL | 2018-01-01 → 2023-12-31
+2026-06-27 20:12:37 | INFO     | data.pipeline | ============================================================
+2026-06-27 20:12:37 | INFO     | data.downloader | Downloading AAPL from 2018-01-01 to 2023-12-31 via yfinance...
+2026-06-27 20:12:39 | INFO     | data.downloader | Downloaded 1509 trading days for AAPL. Saved to data/raw/raw_ohlcv.csv.
+2026-06-27 20:12:39 | INFO     | data.indicators | Indicators computed. Dropped 19 warm-up rows (expected ~26). 1490 rows remaining.
+2026-06-27 20:12:39 | DEBUG    | data.indicators | Feature columns present: ['Open', 'High', 'Low', 'Close', 'Volume', 'RSI', 'MACD', 'MACD_Signal', 'MACD_Hist', 'SMA10', 'SMA20', 'EMA10', 'EMA20']
+2026-06-27 20:12:39 | INFO     | data.labeler | Labels generated (ε=0.0000): 1489 total | 796 positive (53.5%) | 693 negative (46.5%)
+2026-06-27 20:12:39 | INFO     | data.pipeline | Aligned dataset saved to data/processed/aligned_dataset.csv (1489 rows).
+2026-06-27 20:12:39 | INFO     | data.splitter | Chronological split complete:
+2026-06-27 20:12:39 | INFO     | data.splitter |   TRAIN | n=1042 | 2018-01-31 → 2022-03-21 | 53.8% positive
+2026-06-27 20:12:39 | INFO     | data.splitter |   VAL   | n=223  | 2022-03-22 → 2023-02-08 | 50.7% positive
+2026-06-27 20:12:39 | INFO     | data.splitter |   TEST  | n=224  | 2023-02-09 → 2023-12-29 | 54.5% positive
+2026-06-27 20:12:39 | INFO     | data.splitter | Split info saved to configs/split_info.json
+2026-06-27 20:12:39 | INFO     | data.labeler | Class balance in training set: 53.8% positive / 46.2% negative — within threshold.
+2026-06-27 20:12:39 | INFO     | data.labeler | Class balance in validation set: 50.7% positive / 49.3% negative — within threshold.
+2026-06-27 20:12:39 | INFO     | data.labeler | Class balance in test set: 54.5% positive / 45.5% negative — within threshold.
+2026-06-27 20:12:39 | INFO     | data.labeler | Class 0: n=481, weight=1.0832
+2026-06-27 20:12:39 | INFO     | data.labeler | Class 1: n=561, weight=0.9287
+2026-06-27 20:12:39 | INFO     | data.labeler | Class weights saved to configs/class_weights.pt: [w0=1.0832, w1=0.9287]
+2026-06-27 20:12:39 | INFO     | data.splitter | MinMaxScaler fit on training set (1042 rows, 13 features).
+2026-06-27 20:12:39 | DEBUG    | data.splitter | Scaled train set (1042 rows).
+2026-06-27 20:12:39 | DEBUG    | data.splitter | Scaled val set (223 rows).
+2026-06-27 20:12:39 | DEBUG    | data.splitter | Scaled test set (224 rows).
+2026-06-27 20:12:39 | INFO     | data.splitter | MinMaxScaler saved to checkpoints/scaler.pkl
+2026-06-27 20:12:39 | INFO     | data.pipeline | Saved scaled train split to data/train_scaled.csv.
+2026-06-27 20:12:39 | INFO     | data.pipeline | Saved scaled val split to data/val_scaled.csv.
+2026-06-27 20:12:39 | INFO     | data.pipeline | Saved scaled test split to data/test_scaled.csv.
+2026-06-27 20:12:39 | INFO     | data.pipeline | ============================================================
+2026-06-27 20:12:39 | INFO     | data.pipeline | PHASE 1 COMPLETE.
+2026-06-27 20:12:39 | INFO     | data.pipeline | Train: 1042 rows | Val: 223 rows | Test: 224 rows
+2026-06-27 20:12:39 | INFO     | data.pipeline | Class weights → w0=1.0832  w1=0.9287
+2026-06-27 20:12:39 | INFO     | data.pipeline | ============================================================
+2026-06-27 20:14:42 | INFO     | data.pipeline | ============================================================
+2026-06-27 20:14:42 | INFO     | data.pipeline | PHASE 1 — Data Scraping & Alignment
+2026-06-27 20:14:42 | INFO     | data.pipeline | Ticker: AAPL | 2018-01-01 → 2023-12-31
+2026-06-27 20:14:42 | INFO     | data.pipeline | ============================================================
+2026-06-27 20:14:42 | INFO     | data.downloader | Raw OHLCV file already exists at data/raw/raw_ohlcv.csv — skipping download.
+2026-06-27 20:14:42 | INFO     | data.downloader | Loaded 1509 rows from cache.
+2026-06-27 20:14:42 | INFO     | data.indicators | Indicators computed. Dropped 19 warm-up rows (expected ~26). 1490 rows remaining.
+2026-06-27 20:14:42 | DEBUG    | data.indicators | Feature columns present: ['Open', 'High', 'Low', 'Close', 'Volume', 'RSI', 'MACD', 'MACD_Signal', 'MACD_Hist', 'SMA10', 'SMA20', 'EMA10', 'EMA20']
+2026-06-27 20:14:42 | INFO     | data.labeler | Labels generated (ε=0.0000): 1489 total | 796 positive (53.5%) | 693 negative (46.5%)
+2026-06-27 20:14:42 | INFO     | data.pipeline | Aligned dataset saved to data/processed/aligned_dataset.csv (1489 rows).
+2026-06-27 20:14:42 | INFO     | data.splitter | Chronological split complete:
+2026-06-27 20:14:42 | INFO     | data.splitter |   TRAIN | n=1042 | 2018-01-31 → 2022-03-21 | 53.8% positive
+2026-06-27 20:14:42 | INFO     | data.splitter |   VAL   | n=223  | 2022-03-22 → 2023-02-08 | 50.7% positive
+2026-06-27 20:14:42 | INFO     | data.splitter |   TEST  | n=224  | 2023-02-09 → 2023-12-29 | 54.5% positive
+2026-06-27 20:14:42 | INFO     | data.splitter | Split info saved to configs/split_info.json
+2026-06-27 20:14:42 | INFO     | data.labeler | Class balance in training set: 53.8% positive / 46.2% negative — within threshold.
+2026-06-27 20:14:42 | INFO     | data.labeler | Class balance in validation set: 50.7% positive / 49.3% negative — within threshold.
+2026-06-27 20:14:42 | INFO     | data.labeler | Class balance in test set: 54.5% positive / 45.5% negative — within threshold.
+2026-06-27 20:14:42 | INFO     | data.labeler | Class 0: n=481, weight=1.0832
+2026-06-27 20:14:42 | INFO     | data.labeler | Class 1: n=561, weight=0.9287
+2026-06-27 20:14:42 | INFO     | data.labeler | Class weights saved to configs/class_weights.pt: [w0=1.0832, w1=0.9287]
+2026-06-27 20:14:42 | INFO     | data.splitter | MinMaxScaler fit on training set (1042 rows, 13 features).
+2026-06-27 20:14:42 | DEBUG    | data.splitter | Scaled train set (1042 rows).
+2026-06-27 20:14:42 | DEBUG    | data.splitter | Scaled val set (223 rows).
+2026-06-27 20:14:42 | DEBUG    | data.splitter | Scaled test set (224 rows).
+2026-06-27 20:14:42 | INFO     | data.splitter | MinMaxScaler saved to checkpoints/scaler.pkl
+2026-06-27 20:14:42 | INFO     | data.pipeline | Saved scaled train split to data/train_scaled.csv.
+2026-06-27 20:14:42 | INFO     | data.pipeline | Saved scaled val split to data/val_scaled.csv.
+2026-06-27 20:14:42 | INFO     | data.pipeline | Saved scaled test split to data/test_scaled.csv.
+2026-06-27 20:14:42 | INFO     | data.pipeline | ============================================================
+2026-06-27 20:14:42 | INFO     | data.pipeline | PHASE 1 COMPLETE.
+2026-06-27 20:14:42 | INFO     | data.pipeline | Train: 1042 rows | Val: 223 rows | Test: 224 rows
+2026-06-27 20:14:42 | INFO     | data.pipeline | Class weights → w0=1.0832  w1=0.9287
+2026-06-27 20:14:42 | INFO     | data.pipeline | ============================================================
+2026-06-27 20:22:23 | INFO     | data.pipeline | ============================================================
+2026-06-27 20:22:23 | INFO     | data.pipeline | PHASE 1 — Data Scraping & Alignment
+2026-06-27 20:22:23 | INFO     | data.pipeline | Ticker: AAPL | 2018-01-01 → 2023-12-31
+2026-06-27 20:22:23 | INFO     | data.pipeline | ============================================================
+2026-06-27 20:22:23 | INFO     | data.downloader | Downloading AAPL from 2018-01-01 to 2023-12-31 via yfinance...
+2026-06-27 20:22:24 | INFO     | data.downloader | Downloaded 1509 trading days for AAPL. Saved to data/raw/raw_ohlcv.csv.
+2026-06-27 20:22:24 | INFO     | data.indicators | Indicators computed. Dropped 19 warm-up rows (expected ~26). 1490 rows remaining.
+2026-06-27 20:22:24 | DEBUG    | data.indicators | Feature columns present: ['Open', 'High', 'Low', 'Close', 'Volume', 'RSI', 'MACD', 'MACD_Signal', 'MACD_Hist', 'SMA10', 'SMA20', 'EMA10', 'EMA20']
+2026-06-27 20:22:24 | INFO     | data.labeler | Labels generated (ε=0.0000): 1489 total | 796 positive (53.5%) | 693 negative (46.5%)
+2026-06-27 20:22:24 | INFO     | data.pipeline | Aligned dataset saved to data/processed/aligned_dataset.csv (1489 rows).
+2026-06-27 20:22:24 | INFO     | data.splitter | Chronological split complete:
+2026-06-27 20:22:24 | INFO     | data.splitter |   TRAIN | n=1042 | 2018-01-31 → 2022-03-21 | 53.8% positive
+2026-06-27 20:22:24 | INFO     | data.splitter |   VAL   | n=223  | 2022-03-22 → 2023-02-08 | 50.7% positive
+2026-06-27 20:22:24 | INFO     | data.splitter |   TEST  | n=224  | 2023-02-09 → 2023-12-29 | 54.5% positive
+2026-06-27 20:22:24 | INFO     | data.splitter | Split info saved to configs/split_info.json
+2026-06-27 20:22:24 | INFO     | data.labeler | Class balance in training set: 53.8% positive / 46.2% negative — within threshold.
+2026-06-27 20:22:24 | INFO     | data.labeler | Class balance in validation set: 50.7% positive / 49.3% negative — within threshold.
+2026-06-27 20:22:24 | INFO     | data.labeler | Class balance in test set: 54.5% positive / 45.5% negative — within threshold.
+2026-06-27 20:22:24 | INFO     | data.labeler | Class 0: n=481, weight=1.0832
+2026-06-27 20:22:24 | INFO     | data.labeler | Class 1: n=561, weight=0.9287
+2026-06-27 20:22:24 | INFO     | data.labeler | Class weights saved to configs/class_weights.pt: [w0=1.0832, w1=0.9287]
+2026-06-27 20:22:24 | INFO     | data.splitter | MinMaxScaler fit on training set (1042 rows, 13 features).
+2026-06-27 20:22:24 | DEBUG    | data.splitter | Scaled train set (1042 rows).
+2026-06-27 20:22:24 | DEBUG    | data.splitter | Scaled val set (223 rows).
+2026-06-27 20:22:24 | DEBUG    | data.splitter | Scaled test set (224 rows).
+2026-06-27 20:22:24 | INFO     | data.splitter | MinMaxScaler saved to checkpoints/scaler.pkl
+2026-06-27 20:22:24 | INFO     | data.pipeline | Saved scaled train split to data/train_scaled.csv.
+2026-06-27 20:22:24 | INFO     | data.pipeline | Saved scaled val split to data/val_scaled.csv.
+2026-06-27 20:22:24 | INFO     | data.pipeline | Saved scaled test split to data/test_scaled.csv.
+2026-06-27 20:22:24 | INFO     | data.pipeline | ============================================================
+2026-06-27 20:22:24 | INFO     | data.pipeline | PHASE 1 COMPLETE.
+2026-06-27 20:22:24 | INFO     | data.pipeline | Train: 1042 rows | Val: 223 rows | Test: 224 rows
+2026-06-27 20:22:24 | INFO     | data.pipeline | Class weights → w0=1.0832  w1=0.9287
+2026-06-27 20:22:24 | INFO     | data.pipeline | ============================================================
+2026-06-27 20:24:27 | INFO     | data.pipeline | ============================================================
+2026-06-27 20:24:27 | INFO     | data.pipeline | PHASE 1 — Data Scraping & Alignment
+2026-06-27 20:24:27 | INFO     | data.pipeline | Ticker: AAPL | 2018-01-01 → 2020-06-04
+2026-06-27 20:24:27 | INFO     | data.pipeline | ============================================================
+2026-06-27 20:24:27 | INFO     | data.downloader | Downloading AAPL from 2018-01-01 to 2020-06-04 via yfinance...
+2026-06-27 20:24:28 | INFO     | data.downloader | Downloaded 609 trading days for AAPL. Saved to data/raw/raw_ohlcv.csv.
+2026-06-27 20:24:28 | INFO     | data.indicators | Indicators computed. Dropped 19 warm-up rows (expected ~26). 590 rows remaining.
+2026-06-27 20:24:28 | DEBUG    | data.indicators | Feature columns present: ['Open', 'High', 'Low', 'Close', 'Volume', 'RSI', 'MACD', 'MACD_Signal', 'MACD_Hist', 'SMA10', 'SMA20', 'EMA10', 'EMA20']
+2026-06-27 20:24:28 | INFO     | data.labeler | Labels generated (ε=0.0000): 589 total | 322 positive (54.7%) | 267 negative (45.3%)
+2026-06-27 20:24:28 | INFO     | data.pipeline | Aligned dataset saved to data/processed/aligned_dataset.csv (589 rows).
+2026-06-27 20:24:28 | INFO     | data.splitter | Chronological split complete:
+2026-06-27 20:24:28 | INFO     | data.splitter |   TRAIN | n=412  | 2018-01-31 → 2019-09-19 | 54.1% positive
+2026-06-27 20:24:28 | INFO     | data.splitter |   VAL   | n=88   | 2019-09-20 → 2020-01-27 | 61.4% positive
+2026-06-27 20:24:28 | INFO     | data.splitter |   TEST  | n=89   | 2020-01-28 → 2020-06-03 | 50.6% positive
+2026-06-27 20:24:28 | INFO     | data.splitter | Split info saved to configs/split_info.json
+2026-06-27 20:24:28 | INFO     | data.labeler | Class balance in training set: 54.1% positive / 45.9% negative — within threshold.
+2026-06-27 20:24:28 | WARNING  | data.labeler | CLASS IMBALANCE DETECTED in validation set: class 1 is the majority at 61.4% (threshold: 60%). Class weights will compensate — verify CrossEntropyLoss receives them.
+2026-06-27 20:24:28 | INFO     | data.labeler | Class balance in test set: 50.6% positive / 49.4% negative — within threshold.
+2026-06-27 20:24:28 | INFO     | data.labeler | Class 0: n=189, weight=1.0899
+2026-06-27 20:24:28 | INFO     | data.labeler | Class 1: n=223, weight=0.9238
+2026-06-27 20:24:28 | INFO     | data.labeler | Class weights saved to configs/class_weights.pt: [w0=1.0899, w1=0.9238]
+2026-06-27 20:24:28 | INFO     | data.splitter | MinMaxScaler fit on training set (412 rows, 13 features).
+2026-06-27 20:24:28 | DEBUG    | data.splitter | Scaled train set (412 rows).
+2026-06-27 20:24:28 | DEBUG    | data.splitter | Scaled val set (88 rows).
+2026-06-27 20:24:28 | DEBUG    | data.splitter | Scaled test set (89 rows).
+2026-06-27 20:24:28 | INFO     | data.splitter | MinMaxScaler saved to checkpoints/scaler.pkl
+2026-06-27 20:24:28 | INFO     | data.pipeline | Saved scaled train split to data/train_scaled.csv.
+2026-06-27 20:24:28 | INFO     | data.pipeline | Saved scaled val split to data/val_scaled.csv.
+2026-06-27 20:24:28 | INFO     | data.pipeline | Saved scaled test split to data/test_scaled.csv.
+2026-06-27 20:24:28 | INFO     | data.pipeline | ============================================================
+2026-06-27 20:24:28 | INFO     | data.pipeline | PHASE 1 COMPLETE.
+2026-06-27 20:24:28 | INFO     | data.pipeline | Train: 412 rows | Val: 88 rows | Test: 89 rows
+2026-06-27 20:24:28 | INFO     | data.pipeline | Class weights → w0=1.0899  w1=0.9238
+2026-06-27 20:24:28 | INFO     | data.pipeline | ============================================================

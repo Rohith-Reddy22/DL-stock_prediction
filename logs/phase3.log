@@ -1,0 +1,24 @@
+2026-06-27 20:59:23 | INFO     | __main__ | ============================================================
+2026-06-27 20:59:23 | INFO     | __main__ | PHASE 3 — Dataset & DataLoader Validation
+2026-06-27 20:59:23 | INFO     | __main__ | ============================================================
+2026-06-27 20:59:23 | INFO     | datasets.dataloader | Loading split DataFrames...
+2026-06-27 20:59:23 | INFO     | datasets.dataloader | Split sizes — train: 412 | val: 88 | test: 89 | full: 589
+2026-06-27 20:59:23 | INFO     | datasets.dataloader | Loaded embedding index: 589 entries.
+2026-06-27 20:59:23 | INFO     | datasets.dataloader | Building datasets...
+2026-06-27 20:59:23 | INFO     | datasets.stock_dataset | Dataset built: 382 valid samples | excluded 30 (no history) | 0 (no embedding)
+2026-06-27 20:59:23 | INFO     | datasets.stock_dataset | Dataset built: 88 valid samples | excluded 0 (no history) | 0 (no embedding)
+2026-06-27 20:59:23 | INFO     | datasets.stock_dataset | Dataset built: 89 valid samples | excluded 0 (no history) | 0 (no embedding)
+2026-06-27 20:59:23 | INFO     | datasets.dataloader | Dataset sizes — train: 382 | val: 88 | test: 89
+2026-06-27 20:59:23 | INFO     | datasets.dataloader | DataLoaders ready — batch_size=32 | train_batches=12 | val_batches=3 | test_batches=3
+2026-06-27 21:03:10 | INFO     | __main__ | ============================================================
+2026-06-27 21:03:10 | INFO     | __main__ | PHASE 3 — Dataset & DataLoader Validation
+2026-06-27 21:03:10 | INFO     | __main__ | ============================================================
+2026-06-27 21:03:10 | INFO     | datasets.dataloader | Loading split DataFrames...
+2026-06-27 21:03:10 | INFO     | datasets.dataloader | Split sizes — train: 412 | val: 88 | test: 89 | full: 589
+2026-06-27 21:03:10 | INFO     | datasets.dataloader | Loaded embedding index: 589 entries.
+2026-06-27 21:03:10 | INFO     | datasets.dataloader | Building datasets...
+2026-06-27 21:03:10 | INFO     | datasets.stock_dataset | Dataset built: 382 valid samples | excluded 30 (no history) | 0 (no embedding)
+2026-06-27 21:03:10 | INFO     | datasets.stock_dataset | Dataset built: 88 valid samples | excluded 0 (no history) | 0 (no embedding)
+2026-06-27 21:03:10 | INFO     | datasets.stock_dataset | Dataset built: 89 valid samples | excluded 0 (no history) | 0 (no embedding)
+2026-06-27 21:03:10 | INFO     | datasets.dataloader | Dataset sizes — train: 382 | val: 88 | test: 89
+2026-06-27 21:03:10 | INFO     | datasets.dataloader | DataLoaders ready — batch_size=32 | train_batches=12 | val_batches=3 | test_batches=3
