@@ -1,0 +1,10 @@
+variant,hidden_size,best_epoch,best_val_loss,best_val_acc,n_params,checkpoint_path,note
+price_only,64,1,0.6966,0.4091,62082,checkpoints/price_only_h64_best.pt,
+price_only,128,1,0.6911,0.6136,222082,checkpoints/price_only_h128_best.pt,
+price_only,256,31,0.6898,0.6136,836994,checkpoints/price_only_h256_best.pt,
+text_only,64,3,0.6942,0.6136,689282,checkpoints/text_only_h64_best.pt,
+text_only,128,3,0.6942,0.6136,689282,checkpoints/text_only_h64_best.pt,same as text_only_h64
+text_only,256,3,0.6942,0.6136,689282,checkpoints/text_only_h64_best.pt,same as text_only_h64
+fusion,64,1,0.6915,0.6136,750978,checkpoints/fusion_h64_best.pt,
+fusion,128,3,0.6925,0.6136,910978,checkpoints/fusion_h128_best.pt,
+fusion,256,1,0.6909,0.6136,1525890,checkpoints/fusion_h256_best.pt,
